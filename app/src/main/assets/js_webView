@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>测试</title>
+</head>
+<body>
+<script type="text/javascript">
+    function alerts(){
+      alert("test");
+    }
+
+    function toast(){
+        wv.test();
+    }
+</script>
+<div>
+    <h7>点击页面返回键弹出alert弹窗</h7>
+    <h7>点击按钮调用android中的方法，吐出吐司</h7>
+</div>
+<button id="btn" name="button" onclick="toast()">click</button>
+</body>
+</html>

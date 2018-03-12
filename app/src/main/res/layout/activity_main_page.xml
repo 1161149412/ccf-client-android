@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include layout="@layout/item_title"
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"/>
+        <cn.cnlinfo.ccf.view.StopScrollViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </cn.cnlinfo.ccf.view.StopScrollViewPager>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fl_buttom_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_gravity="bottom"
+        android:background="@color/color_white_ffffff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="5">
+        <TextView
+            android:id="@+id/tv_main_page"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/ic_home_page"
+            android:text="@string/main_page" />
+
+        <TextView
+            android:id="@+id/tv_gauage_panel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ptr_rotate_arrow"
+            android:gravity="center_horizontal"
+            android:text="@string/gauage_panel" />
+
+        <TextView
+            android:id="@+id/tv_trading_center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_trading_center"
+            android:gravity="center_horizontal"
+            android:text="@string/trading_center" />
+
+        <TextView
+            android:id="@+id/tv_cc_mall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_cc_mall"
+            android:gravity="center_horizontal"
+            android:text="@string/cc_mall" />
+
+        <TextView
+            android:id="@+id/tv_cc_union"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_cc_union"
+            android:gravity="center_horizontal"
+            android:text="@string/cc_union" />
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_white_ffffff"
+    tools:context="cn.cnlinfo.ccf.activity.PreviewSaveActivity">
+    <FrameLayout
+        android:id="@+id/fl_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/color_black_0e1214">
+
+        <ImageButton
+            android:id="@+id/ibt_back"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical|left"
+            android:background="@null"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/text_ffffff_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:maxEms="15"
+            android:maxLength="20"
+            android:text="登录" />
+
+        <Button
+            android:id="@+id/ibt_save"
+            android:layout_width="48dp"
+            android:layout_height="36dp"
+            android:background="@null"
+            android:text="保存"
+            style="@style/text_ffffff_15"
+            android:layout_gravity="end|center"
+            />
+    </FrameLayout>
+    <com.bm.library.PhotoView
+        android:id="@+id/iv_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

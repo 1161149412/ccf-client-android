@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_title_no_right"/>
+    <include layout="@layout/item_image"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="18dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="您有什么问题或建议想对我们说？"
+                android:textSize="15sp"
+                android:textColor="@color/color_blue_33b5e5"
+                />
+
+            <cn.cnlinfo.ccf.view.CleanEditText
+                android:id="@+id/et_help_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:lines="5"
+                android:gravity="top"
+                android:padding="9dp"
+                android:maxLength="200"
+                android:hint="您的宝贵意见，就是我们进步的源泉！！"
+                android:background="@drawable/edit_text_style"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:hint="@string/message_tips"
+                />
+
+            <Button
+                android:id="@+id/btn_pro_submit"
+                android:layout_marginTop="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/selector_btn_bg"
+                style="@style/text_ffffff_15"
+                android:text="问题提交"
+                android:layout_marginBottom="18dp"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <include layout="@layout/item_title_no_right"/>
+    <include layout="@layout/item_image"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="18dp"
+        android:background="@drawable/icon_background"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_seller_complains_buyer"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="卖家投诉买家"
+            style="@style/text_0e1214_17"
+            android:gravity="center_vertical"
+            android:background="@drawable/selector_text_view_bg"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_gray_eae8db"/>
+    </LinearLayout>
+</LinearLayout>

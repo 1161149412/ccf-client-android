@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.cnlinfo.ccf.activity.BuildQRCodeActivity"
+    android:background="@color/color_gray_3e4143">
+
+    <include layout="@layout/item_title"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="96dp"
+        android:layout_marginBottom="96dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/color_white_ffffff"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="32dp"
+            android:background="@color/color_gray_a5a5a6"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/iv_qrCode"
+                android:layout_width="196dp"
+                android:layout_height="196dp"
+                android:layout_margin="48dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫一扫上面的二维码，获得更多"
+            android:layout_gravity="bottom|center_horizontal"
+            android:textColor="@color/color_black_0e1214"
+            android:layout_marginBottom="9dp"
+            style="@style/text_333_12"/>
+
+    </FrameLayout>
+
+</LinearLayout>

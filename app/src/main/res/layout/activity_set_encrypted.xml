@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/icon_background"
+    tools:context="cn.cnlinfo.ccf.activity.SetEncryptedActivity">
+    <include layout="@layout/item_title_no_right"/>
+    <include layout="@layout/item_image"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="38dp"
+        android:paddingRight="48dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="17dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="问题一" />
+
+            <Spinner
+                android:id="@+id/sp_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="答案" />
+
+            <cn.cnlinfo.ccf.view.CleanEditText
+                android:id="@+id/ct_answer_one"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="3"
+                android:background="@drawable/edit_text_style"
+                android:gravity="center"
+                android:inputType="text"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:textColor="@drawable/selector_edit_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="问题二"
+
+                />
+
+            <Spinner
+                android:id="@+id/sp_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="答案" />
+
+            <cn.cnlinfo.ccf.view.CleanEditText
+                android:id="@+id/ct_answer_two"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="3"
+                android:background="@drawable/edit_text_style"
+                android:gravity="center"
+                android:inputType="text"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:textColor="@drawable/selector_edit_text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="问题三" />
+
+            <Spinner
+                android:id="@+id/sp_three"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="答案" />
+
+            <cn.cnlinfo.ccf.view.CleanEditText
+                android:id="@+id/ct_answer_three"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="3"
+                android:background="@drawable/edit_text_style"
+                android:gravity="center"
+                android:inputType="text"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:textColor="@drawable/selector_edit_text_color" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="69dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_button_bg"
+            android:layout_marginTop="18dp"
+            android:text="设置"/>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

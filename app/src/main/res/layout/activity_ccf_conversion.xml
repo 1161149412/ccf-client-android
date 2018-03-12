@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/icon_background"
+    tools:context="cn.cnlinfo.ccf.activity.CCFConversionActivity">
+    <include layout="@layout/item_title_no_right"/>
+    <include layout="@layout/item_image"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="18dp"
+        android:background="@drawable/icon_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/one_level_height"
+                android:text="兑换中心"
+                style="@style/text_0e1214_17"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height"
+                    android:text="碳控因子兑换"
+                    style="@style/text_0e1214_15" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height"
+                    android:layout_weight="3"
+                    android:text="现有的碳控因子"
+                    style="@style/text_0e1214_15"/>
+
+                <TextView
+                    android:id="@+id/tv_ccf_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="6"
+                    android:hint="碳控因子持有数量"
+                    style="@style/text_0e1214_15"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height"
+                    android:layout_weight="3"
+                    android:text="兑换类型"
+                    style="@style/text_0e1214_15"/>
+                <Spinner
+                    android:id="@+id/spinner_exchange_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="7"
+                    android:entries="@array/spinner_exchange_type"
+                    style="@style/text_0e1214_15"
+                    />
+            </LinearLayout>
+<!--            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="9dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height"
+                    android:layout_weight="1"
+                    android:text="兑换比例"
+                    style="@style/text_0e1214_15" />
+                <EditText
+                    android:id="@+id/edit_exchange_ratio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@drawable/edit_text_style"
+                    android:layout_weight="3"
+                    />
+            </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/height"
+                    android:layout_weight="3"
+                    android:text="兑换数量"
+                    style="@style/text_0e1214_15" />
+                <cn.cnlinfo.ccf.view.CleanEditText
+                    android:id="@+id/edit_exchange_number"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="7"
+                    android:gravity="center"
+                    android:background="@drawable/edit_text_style"
+                    style="@style/text_0e1214_15"
+                    android:inputType="numberDecimal" />
+            </LinearLayout>
+                <Button
+                    android:id="@+id/but_confirm"
+                    android:layout_width="69dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_gravity="center"
+                    android:text="兑换"
+                    android:background="@drawable/selector_button_bg"
+                    style="@style/text_0e1214_15"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_eae8db"
+    android:padding="9dp">
+
+        <cn.cnlinfo.ccf.view.CleanEditText
+            android:id="@+id/et_complain_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:lines="5"
+            android:gravity="top"
+            android:hint="请填写你的投诉内容...(50字以内)"
+            android:background="@drawable/edit_text_style"
+            />
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_marginTop="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@drawable/selector_btn_bg"
+            style="@style/text_ffffff_15"
+            android:text="提交"
+            android:layout_marginBottom="18dp"
+            />
+</LinearLayout>

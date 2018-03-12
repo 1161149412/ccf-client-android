@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="cn.cnlinfo.ccf.view.CleanEditText">
+        <!--提示信息-->
+        <attr name="tipMessage" format="string"></attr>
+        <!--电话号码-->
+        <attr name="phone" format="string"></attr>
+        <!--身份证-->
+        <attr name="id" format="string"></attr>
+        <!--邮箱-->
+        <attr name="email" format="string"></attr>
+        <!--银行卡号-->
+        <attr name="bank_num" format="string"></attr>
+        <!--输入类型-->
+        <attr name="type" format="string"></attr>
+    </declare-styleable>
+</resources>

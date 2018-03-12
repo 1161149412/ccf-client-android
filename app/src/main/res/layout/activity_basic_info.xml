@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:jp="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/icon_background"
+    tools:context="cn.cnlinfo.ccf.activity.SetBasicInfoActivity">
+    <include layout="@layout/item_title_no_right"/>
+    <include layout="@layout/item_image"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="18dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="18dp"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/text_0e1214_15"
+                    android:text="姓名" />
+
+                <cn.cnlinfo.ccf.view.CleanEditText
+                    android:id="@+id/et_name"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/edit_text_style"
+                    android:gravity="center"
+                    android:hint="真实姓名"
+                    android:inputType="text"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    style="@style/text_0e1214_15"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/text_0e1214_15"
+                    android:text="手机号码" />
+
+                <TextView
+                    android:id="@+id/et_phone_num"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/edit_text_style"
+                    android:gravity="center"
+                    android:hint="11位手机号"
+                    android:digits="@string/input_impose_num"
+                    android:inputType="text"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    style="@style/text_0e1214_15"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/text_0e1214_15"
+                    android:text="证件类型" />
+
+                <Spinner
+                    android:id="@+id/sp_certificate_type"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:entries="@array/spinner_certificate_type"
+                    style="@style/text_0e1214_15"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/text_0e1214_15"
+                    android:text="证件号码" />
+
+                <cn.cnlinfo.ccf.view.CleanEditText
+                    android:id="@+id/et_id_number"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/edit_text_style"
+                    android:gravity="center"
+                    android:digits="@string/input_impose_num_upper_case"
+                    android:inputType="text"
+                    android:maxLength="18"
+                    jp:tipMessage = "@string/id_tip"
+                    jp:type="id"
+                    android:maxLines="1"
+                    style="@style/text_0e1214_15"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/text_0e1214_15"
+                    android:text="开户银行" />
+
+                <cn.cnlinfo.ccf.view.CleanEditText
+                    android:id="@+id/et_choose_bank"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/edit_text_style"
+                    android:gravity="center"
+                    android:hint="输入银行"
+                    android:inputType="text"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    style="@style/text_0e1214_15"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/text_0e1214_15"
+                    android:text="开户地址" />
+
+                <cn.cnlinfo.ccf.view.CleanEditText
+                    android:id="@+id/et_account_address"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/edit_text_style"
+                    android:gravity="center"
+                    android:hint="开户地址"
+                    android:inputType="text"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    style="@style/text_0e1214_15"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/text_0e1214_15"
+                    android:text="银行卡号" />
+
+                <cn.cnlinfo.ccf.view.CleanEditText
+                    android:id="@+id/et_bank_card_number"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/edit_text_style"
+                    android:digits="@string/input_impose_num"
+                    android:gravity="center"
+                    android:hint="银行卡号"
+                    style="@style/text_0e1214_15"
+                    jp:tipMessage = "@string/bank_num_tip"
+                    jp:type="bank_num"
+                    android:inputType="text"
+                    android:maxLength="21"
+                    android:maxLines="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/text_0e1214_15"
+                    android:text="支付宝账号" />
+
+                <cn.cnlinfo.ccf.view.CleanEditText
+                    android:id="@+id/et_alipay_account_number"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/edit_text_style"
+                    android:gravity="center"
+                    android:hint="支付宝账号"
+                    style="@style/text_0e1214_15"
+                    android:inputType="text"
+                    android:maxLength="21"
+                    android:maxLines="1"
+                    />
+            </LinearLayout>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/text_0e1214_15"
+                android:text="支付宝昵称" />
+
+            <cn.cnlinfo.ccf.view.CleanEditText
+                android:id="@+id/et_alipay_nickname"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="3"
+                android:background="@drawable/edit_text_style"
+                android:gravity="center"
+                android:hint="支付宝昵称"
+                android:inputType="text"
+                android:maxLength="16"
+                android:maxLines="1"
+                style="@style/text_0e1214_15"
+                />
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/text_0e1214_15"
+                    android:text="微信昵称" />
+
+                <cn.cnlinfo.ccf.view.CleanEditText
+                    android:id="@+id/et_wechat_nickname"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/edit_text_style"
+                    android:gravity="center"
+                    android:hint="微信昵称"
+                    android:inputType="text"
+                    style="@style/text_0e1214_15"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/text_0e1214_15"
+                    android:text="微信号码" />
+
+                <cn.cnlinfo.ccf.view.CleanEditText
+                    android:id="@+id/et_wechat_number"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/edit_text_style"
+                    android:gravity="center"
+                    android:hint="微信号码"
+                    android:inputType="text"
+                    android:maxLength="22"
+                    style="@style/text_0e1214_15"
+                    android:maxLines="1"
+                    />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_setting"
+                android:layout_width="69dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/selector_button_bg"
+                android:layout_marginBottom="18dp"
+                android:text="设置" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

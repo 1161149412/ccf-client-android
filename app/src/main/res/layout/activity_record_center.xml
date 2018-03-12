@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background"
+    android:orientation="vertical"
+    tools:context="cn.cnlinfo.ccf.activity.RecordCenterActivity">
+
+    <include layout="@layout/item_title_no_right" />
+
+    <include layout="@layout/item_image" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:id="@+id/tv_to_self"
+                style="@style/text_0e1214_17"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/selector_text_view_bg"
+                android:gravity="center_vertical"
+                android:text="自身转账记录" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_eae8db" />
+
+            <TextView
+                android:id="@+id/tv_to_out"
+                style="@style/text_0e1214_17"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/selector_text_view_bg"
+                android:gravity="center_vertical"
+                android:text="对外转账记录" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_eae8db" />
+
+
+            <!--   <TextView
+                   android:id="@+id/tv_contribute_value_record"
+                   android:layout_width="match_parent"
+                   android:layout_height="32dp"
+                   android:text="贡献值记录"
+                   style="@style/text_0e1214_17"
+                   android:gravity="center_vertical"
+                   android:background="@drawable/selector_text_view_bg"
+                   />
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/color_gray_eae8db"/>
+               <TextView
+                   android:id="@+id/tv_basic_contribution_rate_record"
+                   android:layout_width="match_parent"
+                   android:layout_height="32dp"
+                   android:text="基础贡献率记录"
+                   style="@style/text_0e1214_17"
+                   android:gravity="center_vertical"
+                   android:background="@drawable/selector_text_view_bg"
+                   />
+
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/color_gray_eae8db"/>
+
+               <TextView
+                   android:id="@+id/tv_e_wallet_record"
+                   android:layout_width="match_parent"
+                   android:layout_height="32dp"
+                   android:text="电子钱包转账记录"
+                   style="@style/text_0e1214_17"
+                   android:gravity="center_vertical"
+                   android:background="@drawable/selector_text_view_bg"
+                   />
+               <View
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"
+                   android:background="@color/color_gray_eae8db"/>-->
+            <TextView
+                android:id="@+id/tv_shopping_record"
+                style="@style/text_0e1214_17"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/selector_text_view_bg"
+                android:gravity="center_vertical"
+                android:text="购物记录"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_eae8db"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_deal_record"
+                style="@style/text_0e1214_17"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/selector_text_view_bg"
+                android:gravity="center_vertical"
+                android:text="交易记录"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_eae8db" />
+
+            <TextView
+                android:id="@+id/tv_pur_meal_record"
+                style="@style/text_0e1214_17"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/selector_text_view_bg"
+                android:gravity="center_vertical"
+                android:text="购买套餐记录" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_eae8db" />
+
+            <TextView
+                android:id="@+id/tv_hang_sell_buy_record"
+                style="@style/text_0e1214_17"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/selector_text_view_bg"
+                android:gravity="center_vertical"
+                android:text="挂卖/挂买记录" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_eae8db" />
+
+            <TextView
+                android:id="@+id/tv_integral_record"
+                style="@style/text_0e1214_17"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/selector_text_view_bg"
+                android:gravity="center_vertical"
+                android:text="用户积分记录" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_eae8db" />
+
+            <TextView
+                android:id="@+id/tv_step_record"
+                style="@style/text_0e1214_17"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/selector_text_view_bg"
+                android:gravity="center_vertical"
+                android:text="步行记录" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_eae8db" />
+
+            <TextView
+                android:id="@+id/tv_conversion_record"
+                style="@style/text_0e1214_17"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/selector_text_view_bg"
+                android:gravity="center_vertical"
+                android:text="兑换循环包记录" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_eae8db" />
+
+            <TextView
+                android:id="@+id/tv_leave_message_record"
+                style="@style/text_0e1214_17"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:background="@drawable/selector_text_view_bg"
+                android:gravity="center_vertical"
+                android:text="留言记录" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_eae8db" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

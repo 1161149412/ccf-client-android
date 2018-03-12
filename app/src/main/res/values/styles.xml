@@ -1,0 +1,148 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="PopupMenuTheme" parent="FullScreen">
+        <!-- Customize your theme here. -->
+        <item name="popupMenuStyle">@style/MyPopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">@style/MyTextAppearance</item>
+        <item name="textAppearanceLargePopupMenu">@style/MyTextAppearance</item>
+        <item name="android:dropDownListViewStyle">@style/MyListViewStyle</item>
+    </style>
+    <style name="anim_menu_bottombar">
+        <item name="android:windowEnterAnimation">@anim/menu_bottombar_in</item>
+        <item name="android:windowExitAnimation">@anim/menu_bottombar_out</item>
+    </style>
+
+    <style name="text_4d8cd6_15">
+        <item name="android:textColor">#4d8cd6</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="text_colorPrimaryDark_15">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="MyPopupMenu">
+        <item name="android:popupBackground">@color/color_black_0e1214</item>
+    </style>
+
+    <style name="MyTextAppearance">
+        <item name="android:textColor">@color/color_white_ffffff</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="MyListViewStyle">
+        <item name="android:divider">@color/color_gray_8b8c8d</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:listSelector">@drawable/selector_btn_forget_pass</item>
+    </style>
+    <!--
+     <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+     <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">false</item>
+    第一个属性很明显就是可以拉升到顶部状态栏，并且定义顶部状态栏透明，这样你的页面就是一整张了，没有上面电池背景条之类的了，
+    整个页面看上去会好很多，第二个属性，是设置你的虚拟键透明，这个虚拟键就是返回和菜单键等，现在有的手机会放到屏幕上，而有的是没有的。到这个时候，如果你的手机有虚拟键的话，你会发现问题来了，
+    你会发现你的页面拉伸到了虚拟键的下面，也就是页面填充了整个屏幕，不留一点空间了，如果你是列表的话，那么无所谓，并不影响操作和页面效果，
+    如果你的是最下面有按钮的页面的话，你会发现这玩意就是一个坑啊，因为你的按钮填充到了下面，你根本按不到，而且如果你设置了透明属性的话，你会发现虚拟键和你最下面的按钮都重合在一起，具体效果
+    -->
+    <style name="FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/img_guide_one_cooperation</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">false</item>
+    </style>
+
+    <style name="NormalFullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="text_ffffff_18">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="text_ffffff_15">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="text_ffffff_12">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_333_18">
+        <item name="android:textColor">#333</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="text_66000000_15">
+        <item name="android:textColor">#66000000</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="text_515151_12">
+        <item name="android:textColor">#515151</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="text_f5543a_15">
+        <item name="android:textColor">#f5543a</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="text_f5543a_17">
+        <item name="android:textColor">#f5543a</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="text_0e1214_17">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#0e1214</item>
+    </style>
+
+    <style name="text_0e1214_20">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#0e1214</item>
+    </style>
+
+    <style name="text_0e1214_15">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#0e1214</item>
+    </style>
+
+    <style name="text_0e1214_12">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#0e1214</item>
+    </style>
+    <style name="text_0e1214_13">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#0e1214</item>
+    </style>
+    <style name="text_0e1214_10">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#0e1214</item>
+    </style>
+    <style name="text_333_12">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_333_15">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <!--spinner的主题-->
+    <style name="spinner_theme" parent="FullScreen">
+        <!-- spinner style -->
+        <item name="android:dropDownListViewStyle">@style/spinner_style</item>
+    </style>
+
+    <style name="spinner_style" parent="android:Widget.ListView.DropDown">
+        <!-- 分隔线颜色 -->
+        <item name="android:divider">@color/color_green_81ced3</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:listSelector">@drawable/selector_btn_forget_pass</item>
+        <item name="android:textColor">@color/color_black_0d0d0d</item>
+    </style>
+</resources>

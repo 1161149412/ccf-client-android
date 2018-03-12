@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.cnlinfo.ccf">
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许读取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许读取wifi网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 允许应用以只读的方式访问手机设备的信息，通过获取的信息来唯一标识用户 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 获取当前应用是否在显示应用，可以更精准的统计用户活跃 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 获取振动通知 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 二维码权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- lite-orn权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-feature android:name="android.hardware.sensor.accelerometer" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 添加读写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 访问互联网权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.stepcounter"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.stepdetector"
+        android:required="true" />
+    <!-- android:hardwareAccelerated="true"   开启硬件加速 app支持硬件加速：加载webview速度-->
+    <application
+        android:name=".CCFApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ccf"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="true"
+        android:theme="@style/FullScreen"
+        android:resizeableActivity="false">
+        <activity
+            android:name=".activity.MainPageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupMenuTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- ********************************************TALKING DATA********************************************************** -->
+
+
+        <!-- TalkingData -->
+        <meta-data
+            android:name="TD_APP_ID"
+            android:value="5349CA59AD0142739106215E4ED1679D" />
+        <meta-data
+            android:name="TD_CHANNEL_ID"
+            android:value="${TD_CHANNEL_ID_VALUE}" />
+
+        <!-- 用户注册见面 -->
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 登录注册展示界面 -->
+        <activity
+            android:name=".activity.LoginRegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"/>
+        <!-- 忘记密码页面 -->
+        <activity
+            android:name=".activity.ForgetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/spinner_theme"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 引导页 -->
+        <activity
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WebActivity"
+            android:process="cn.cnlinfo.ccf.webview"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.BuildQRCodeActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".step_count.service.StepService"
+            android:priority="1000">
+            <intent-filter>
+
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_TIME_TICK" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".step_count.pedometer.StepsDetectService"
+            android:priority="1000"
+            android:process="cn.cnlinfo.ccf.step_count.pedometer.StepsDetectService">
+            <intent-filter>
+
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.ACTION_TIME_TICK" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </service>
+        <!-- 注册会员 -->
+        <activity
+            android:name=".activity.RegisterMemberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/spinner_theme"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 贡献图谱 -->
+        <activity
+            android:name=".activity.ContributionMapActivity"
+            android:screenOrientation="portrait" />
+        <!-- 推荐网络 -->
+        <activity
+            android:name=".activity.RecommendNetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 我的参数 -->
+        <activity
+            android:name=".activity.MyParameterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 平台参数 -->
+        <activity
+            android:name=".activity.PlatformParameterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 跑步排名 -->
+        <activity
+            android:name=".activity.RunningRankActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 设置中心 -->
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 设置个人基本信息 -->
+        <activity
+            android:name=".activity.SetBasicInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/spinner_theme" />
+        <!-- 设置密保 -->
+        <activity
+            android:name=".activity.SetEncryptedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/spinner_theme" />
+        <!-- 留言中心 -->
+        <activity
+            android:name=".activity.LeaveMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 修改密码 -->
+        <activity
+            android:name=".activity.UpdatePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 重置密码 -->
+        <activity
+            android:name=".activity.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 系统公告 -->
+        <activity
+            android:name=".activity.SystemNoticeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 订单中心 -->
+        <activity
+            android:name=".activity.OrderCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupMenuTheme" />
+        <!-- 对外互转 -->
+        <activity
+            android:name=".activity.ForeignTransferActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/spinner_theme" />
+        <!-- 内部互转 -->
+        <activity
+            android:name=".activity.InternalTransferActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/spinner_theme" />
+        <!-- 用户升级 -->
+        <activity
+            android:name=".activity.UserUpgradeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/spinner_theme" />
+        <!-- 记录中心 -->
+        <activity
+            android:name=".activity.RecordCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 碳控公益 -->
+        <activity
+            android:name=".activity.CCPublicBenefitActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 碳控服务 -->
+        <activity
+            android:name=".activity.CCServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 兑换中心 -->
+        <activity
+            android:name=".activity.ConversionCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <activity
+            android:name=".activity.UpgradeAgencyProtocolWebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.pgyer.com"
+                    android:path="/about/termofservice"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <!-- 在线客服 -->
+        <activity
+            android:name=".activity.OnlineServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+
+        <!-- 碳控因子兑换 -->
+        <activity
+            android:name=".activity.CCFConversionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/spinner_theme" />
+        <!-- 循环劵兑换 -->
+        <activity
+            android:name=".activity.ProductionPointsConversionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/spinner_theme" />
+        <!-- 消费积分兑换 -->
+        <activity
+            android:name=".activity.ConsumptionPointsConversionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/spinner_theme" />
+        <!-- 贡献值记录 -->
+        <activity
+            android:name=".activity.ContributeValueRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 交易记录 -->
+        <activity
+            android:name=".activity.TransactionRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 对外转账记录 -->
+        <activity
+            android:name=".activity.ExternalTransferRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 自身转账记录 -->
+        <activity
+            android:name=".activity.ItselfTransferRecordsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 步行记录 -->
+        <activity
+            android:name=".activity.WalkRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 基础贡献率记录 -->
+        <activity
+            android:name=".activity.BasicContributionRateRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 兑换记录 -->
+        <activity
+            android:name=".activity.ConversionCyclePackRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 电子钱包转账记录 -->
+        <activity
+            android:name=".activity.Wallet_Record_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 购物记录 -->
+        <activity
+            android:name=".activity.ShoppingRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 碳控公益 -->
+        <!-- 我要捐步 -->
+        <activity
+            android:name=".activity.DonateStepActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 爱心基金 -->
+        <activity
+            android:name=".activity.BeneficentFundsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 植树基金 -->
+        <activity
+            android:name=".activity.PlantTreeFundsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 爱心奉献 -->
+        <activity
+            android:name=".activity.LoveDedicationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 我要乐捐 -->
+        <activity
+            android:name=".activity.MeDedicationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 发起乐捐 -->
+        <activity
+            android:name=".activity.LaunchDedicationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 公益一帮一 -->
+        <activity
+            android:name=".activity.CommunityHelpOneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 发起公益项目 -->
+        <activity
+            android:name=".activity.InitiatePublicWelfareProjectsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 我的善行记录 -->
+        <activity
+            android:name=".activity.MyGoodDeedsRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 需要帮助 -->
+        <activity
+            android:name=".activity.NeedHelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 碳控环保 -->
+        <activity
+            android:name=".activity.CCEnvironmentalProtectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 环保行 -->
+        <activity
+            android:name=".activity.EnvironmentalProtectionLineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 碳控行 -->
+        <activity
+            android:name=".activity.CCLineActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+
+        <!-- 游戏充值 -->
+        <activity
+            android:name=".activity.GameTopUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 游戏中心 -->
+        <activity
+            android:name=".activity.GameCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 充值注册积分 -->
+        <activity
+            android:name=".activity.RechargeRegisterPointsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 上传图片 -->
+        <activity
+            android:name=".activity.UploadImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 下载文件 -->
+        <activity
+            android:name=".activity.DownLoadFileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+
+        <!-- 服务后台下载文件 -->
+        <service
+            android:name=".service.DownLoadFileService"
+            android:enabled="true"
+            android:exported="true" />
+        <!-- android7.0为防止直接写出文件路径的不安全，提供了此种方式来保护文件安全 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="cn.cnlinfo.ccf.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <!-- 购买套餐记录 -->
+        <activity
+            android:name=".activity.PurchaseMealRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 交易大厅 -->
+        <activity
+            android:name=".activity.TradingCenterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupMenuTheme" />
+        <!-- 挂买/挂卖记录 -->
+        <activity
+            android:name=".activity.HangBuyAndSellRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupMenuTheme" />
+        <!-- 购买碳控因子 -->
+        <activity
+            android:name=".activity.PurCCFActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!-- 出售碳控因子 -->
+        <activity
+            android:name=".activity.SellCCFActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen" />
+        <!--查看凭证-->
+        <activity android:name=".activity.PreviewSaveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NormalFullScreen"
+            />
+        <!--用户积分记录-->
+        <activity android:name=".activity.UserIntegralRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupMenuTheme"
+            />
+        <!--留言记录-->
+        <activity android:name=".activity.LeaveMessageRecordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupMenuTheme"
+            />
+    </application>
+
+</manifest>

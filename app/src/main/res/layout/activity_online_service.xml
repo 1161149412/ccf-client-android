@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.cnlinfo.ccf.activity.LeaveMessageActivity">
+
+    <include layout="@layout/item_title_no_right"/>
+    <include layout="@layout/item_image"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="18dp"
+        android:background="@drawable/icon_background"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_advise_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="意见反馈"
+            style="@style/text_0e1214_17"
+            android:gravity="center_vertical"
+            android:background="@drawable/selector_text_view_bg"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_gray_eae8db"/>
+    </LinearLayout>
+</LinearLayout>

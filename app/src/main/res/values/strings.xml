@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name">碳控因子</string>
+
+    <!--底部按钮值-->
+    <string name="gauage_panel">仪表盘</string>
+    <string name="trading_center">交易中心</string>
+    <string name="cc_mall">CC商城</string>
+    <string name="cc_union">CC联盟</string>
+    <string name="main_page">主页</string>
+
+    <!--页面图标值-->
+    <string name="basic_info">基本信息</string>
+    <string name="register_member">注册会员</string>
+    <string name="contrabution_map">贡献图谱</string>
+    <string name="referral_net">推荐网络</string>
+    <string name="my_paramter">我的参数</string>
+    <string name="platform_paramter">平台参数</string>
+    <string name="running">我要跑步</string>
+    <string name="sys_notice">系统公告</string>
+    <string name="online_wallte">在线钱包</string>
+    <string name="transfer_out">对外互传</string>
+    <string name="transfer_inner">内部互传</string>
+    <string name="user_upgrade">用户升级</string>
+    <string name="cycle_package">循环包</string>
+    <string name="exchange_center">兑换中心</string>
+    <string name="recode_center">记录中心</string>
+    <string name="carbon_benefit">碳控公益</string>
+    <string name="message_tips">(*^_^*)请详细描述您遇到的问题，有助于我们快速定位并解决问题，或留下您宝贵的意见或建议，我们会认真进行评估！</string>
+
+    <string name="please_wait">加载中...</string>
+    <string name="cancel">取消</string>
+    <string name="sure">确定</string>
+
+    <string name="input_impose_num_lower_case">0123456789abcdefghijklmnopqrstuvwxyz</string>
+    <string name="input_impose_num_upper_case">0123456789ABCDEFGHIJKLmMNOPQRSTUVWXYZ</string>
+    <string name="input_impose_num">0123456789</string>
+    <string name="input_impose_num_lower_upper_case">0123456789ABCDEFGHIJKLmMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</string>
+    <string name="input_impose_num_limit">12345</string>
+
+    <!--风险提示语-->
+
+    <string name="dialog_risk_warning_title">风险提示</string>
+    <string name="dialog_risk_warning_text">\t\t尊敬的用户，本平台意在打造一个全民健身项目。通过碳控因子为用户搭建一个供消服务平台。成为体验会员，可以免费通过该平台跑步锻炼身体，同时获取相应数量碳控因子，分享用户免费参与可以提高自身步行认证效率。兑换循环包可以加速认证效率，但需要扣相应碳控因子及循环卷，循环卷可以用碳控因子兑换平台普通套餐获取。平台非投资理财项目，可以全程免费参与，所有交易认购行为均为用户自愿行为，购买起航套餐可以获得平台赠与碳控因子和循环卷，从他人购买碳控因子兑换相应套餐存在风险，请务必保证自己有风险承担能力，请勿多账户参与。</string>
+    <string name="dialog_risk_warning_name">碳控因子维护组</string>
+    <string name="dialog_risk_warning_date">2018-02-25</string>
+
+
+    <string name="spinner_tip">--请选择--</string>
+    <string-array name="agency_type">
+        <item>省代</item>
+        <item>市代</item>
+        <item>县代</item>
+        <item>服务中心</item>
+    </string-array>
+
+
+    <string-array name="service_type">
+        <item>cc商城消费者</item>
+        <item>cc商城商家</item>
+        <item>cc联盟消费者</item>
+        <item>cc联盟商家</item>
+    </string-array>
+
+    <string-array name="trader_type">
+        <item>1星交易商</item>
+        <item>2星交易商</item>
+        <item>3星交易商</item>
+        <item>4星交易商</item>
+        <item>5星交易商</item>
+    </string-array>
+
+    <string-array name="user_type">
+        <item>cc商城</item>
+        <item>cc联盟</item>
+    </string-array>
+
+    <string-array name="security_question">
+        <item>高中学校的名字</item>
+        <item>父亲的名字</item>
+        <item>初中学校的名字</item>
+        <item>你的爱好</item>
+        <item>母亲的名字</item>
+        <item>初中班主任的名字</item>
+        <item>高中班主任的名字</item>
+        <item>你的学号</item>
+        <item>你的出生地</item>
+        <item>你的配偶的名字</item>
+        <item>你的生日</item>
+    </string-array>
+
+
+    <string-array name="spinner_foreign_transfer">
+        <item>碳控因子</item>
+        <item>注册积分</item>
+        <item>消费积分</item>
+        <!--  <item>产品积分</item>-->
+    </string-array>
+
+    <string-array name="spinner_internal_transfer">
+        <item>注册积分转产品积分</item>
+        <item>注册积分转消费积分</item>
+        <item>消费积分转产品积分</item>
+        <item>消费积分转碳控因子</item>
+        <item>碳控因子转产品积分</item>
+        <item>碳控因子转消费积分</item>
+        <item>碳控积分转产品积分</item>
+        <item>产品积分转消费积分</item>
+    </string-array>
+
+    <string name="purchase_meal_describe">注:\n\t\t起航套餐可以全部用注册积分购买消费套餐，也可以采用注册积分加消费积分购买消费套餐，但是注册积分比例不得低于购买套餐的30%!!!\n\t\t普通套餐只能使用碳控因子购买!!!\n\t\t套餐一次最多购买5套</string>
+    <string name="agency_protocol_link">我已阅读代理协议:<a href="http://www.baidu.com">百度一下</a></string>
+
+    <string-array name="spinner_certificate_type">
+        <item>身份证</item>
+        <item>驾驶证</item>
+        <item>护照</item>
+    </string-array>
+
+    <string-array name="spinner_exchange_type">
+        <item>碳控因子兑换循环积分</item>
+        <item>碳控因子兑消费积分</item>
+    </string-array>
+
+    <string-array name="spinner_consumption_points">
+        <item>消费积分兑换循环积分</item>
+        <item>消费积分兑换碳控因子</item>
+    </string-array>
+    <string-array name="spinner_trad_type">
+        <item>挂卖</item>
+        <item>挂买</item>
+    </string-array>
+    
+    <string name="approve_cycle_pack">认证循环包</string>
+    <string name="approve_tip_content">每天认证的次数仅为1次,提前认证后的步行数无效!!!</string>
+
+    <string name="phone_tip">手机号格式不正确，请重新输入</string>
+    <string name="id_tip">证件号格式不正确，请重新输入</string>
+    <string name="bank_num_tip">银行卡号格式不正确，请重新输入</string>
+
+    <color name="google_red">#EA4335</color>
+    <color name="google_yellow">#FBBC05</color>
+    <color name="google_blue">#4285F4</color>
+    <color name="google_green">#34A853</color>
+
+    <string-array name="google_glyph_strings">
+        <item>M142.9,24.2C97.6,39.7,59,73.6,37.5,116.5c-7.5,14.8-12.9,30.5-16.2,46.8c-8.2,40.4-2.5,83.5,16.1,120.3   c12.1,24,29.5,45.4,50.5,62.1c19.9,15.8,43,27.6,67.6,34.1c31,8.3,64,8.1,95.2,1c28.2-6.5,54.9-20,76.2-39.6   c22.5-20.7,38.6-47.9,47.1-77.2c9.3-31.9,10.5-66,4.7-98.8c-58.3,0-116.7,0-175,0c0,24.2,0,48.4,0,72.6c33.8,0,67.6,0,101.4,0   c-3.9,23.2-17.7,44.4-37.2,57.5c-12.3,8.3-26.4,13.6-41,16.2c-14.6,2.5-29.8,2.8-44.4-0.1c-14.9-3-29-9.2-41.4-17.9   c-19.8-13.9-34.9-34.2-42.6-57.1c-7.9-23.3-8-49.2,0-72.4c5.6-16.4,14.8-31.5,27-43.9c15-15.4,34.5-26.4,55.6-30.9   c18-3.8,37-3.1,54.6,2.2c15,4.5,28.8,12.8,40.1,23.6c11.4-11.4,22.8-22.8,34.2-34.2c6-6.1,12.3-12,18.1-18.3   c-17.3-16-37.7-28.9-59.9-37.1C228.2,10.6,183.2,10.3,142.9,24.2z</item>
+        <item>M142.9,24.2c40.2-13.9,85.3-13.6,125.3,1.1c22.2,8.2,42.5,21,59.9,37.1c-5.8,6.3-12.1,12.2-18.1,18.3    c-11.4,11.4-22.8,22.8-34.2,34.2c-11.3-10.8-25.1-19-40.1-23.6c-17.6-5.3-36.6-6.1-54.6-2.2c-21,4.5-40.5,15.5-55.6,30.9    c-12.2,12.3-21.4,27.5-27,43.9c-20.3-15.8-40.6-31.5-61-47.3C59,73.6,97.6,39.7,142.9,24.2z</item>
+        <item>M21.4,163.2c3.3-16.2,8.7-32,16.2-46.8c20.3,15.8,40.6,31.5,61,47.3c-8,23.3-8,49.2,0,72.4    c-20.3,15.8-40.6,31.6-60.9,47.3C18.9,246.7,13.2,203.6,21.4,163.2z</item>
+        <item>M203.7,165.1c58.3,0,116.7,0,175,0c5.8,32.7,4.5,66.8-4.7,98.8c-8.5,29.3-24.6,56.5-47.1,77.2    c-19.7-15.3-39.4-30.6-59.1-45.9c19.5-13.1,33.3-34.3,37.2-57.5c-33.8,0-67.6,0-101.4,0C203.7,213.5,203.7,189.3,203.7,165.1z</item>
+        <item>M37.5,283.5c20.3-15.7,40.6-31.5,60.9-47.3c7.8,22.9,22.8,43.2,42.6,57.1c12.4,8.7,26.6,14.9,41.4,17.9    c14.6,3,29.7,2.6,44.4,0.1c14.6-2.6,28.7-7.9,41-16.2c19.7,15.3,39.4,30.6,59.1,45.9c-21.3,19.7-48,33.1-76.2,39.6    c-31.2,7.1-64.2,7.3-95.2-1c-24.6-6.5-47.7-18.2-67.6-34.1C67,328.9,49.6,307.5,37.5,283.5z</item>
+    </string-array>
+
+    <integer-array name="google_glyph_colors">
+        <item>@android:color/white</item>
+        <item>@color/google_red</item>
+        <item>@color/google_yellow</item>
+        <item>@color/google_blue</item>
+        <item>@color/google_green</item>
+    </integer-array>
+
+</resources>

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icon_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_title_no_right" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_image" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="碳控因子总量：" />
+
+                    <TextView
+                        android:id="@+id/tv_total_ccf"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="初始激活总量：" />
+
+                    <TextView
+                        android:id="@+id/tv_init_total_amount"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="平台已激活总量：" />
+
+                    <TextView
+                        android:id="@+id/tv_alive_total"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="平台待激活总量：" />
+
+                    <TextView
+                        android:id="@+id/tv_total_tba"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="用户已激活总量：" />
+
+                    <TextView
+                        android:id="@+id/tv_user_alive_total"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="用户待激活总量：" />
+
+                    <TextView
+                        android:id="@+id/tv_user_wait_alive_total"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="碳控积分：" />
+
+                    <TextView
+                        android:id="@+id/tv_cc_points"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="当前账号数：" />
+
+                    <TextView
+                        android:id="@+id/tv_current_account_amount"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="当前难度系数：" />
+
+                    <TextView
+                        android:id="@+id/tv_current_difficult_point"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="可用消费积分：" />
+
+                    <TextView
+                        android:id="@+id/tv_available_consume_points"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="待释放消费积分：" />
+
+                    <TextView
+                        android:id="@+id/tv_wait_free_consume_points"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="待释放循环劵积分：" />
+
+                    <TextView
+                        android:id="@+id/tv_wait_free_cycle_points"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="循环券：" />
+
+                    <TextView
+                        android:id="@+id/tv_cycle_coupon"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="已冻结量：" />
+
+                    <TextView
+                        android:id="@+id/tv_frozen_amount"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="省代总数：" />
+
+                    <TextView
+                        android:id="@+id/tv_province_total"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="市代总数：" />
+
+                    <TextView
+                        android:id="@+id/tv_city_total"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="县代总数：" />
+
+                    <TextView
+                        android:id="@+id/tv_county_total"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="服务中心：" />
+
+                    <TextView
+                        android:id="@+id/tv_service_center"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="32dp">
+
+                    <TextView
+                        style="@style/text_0e1214_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height"
+                        android:text="当前循环包数：" />
+
+                    <TextView
+                        android:id="@+id/tv_current_cycle_package_amount"
+                        style="@style/text_0e1214_15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height"
+                        android:text="0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_gray_eae8db" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

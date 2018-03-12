@@ -1,0 +1,178 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'com.neenbedankt.android-apt'
+
+Properties properties = new Properties();
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "cn.cnlinfo.ccf"
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.1"
+        multiDexEnabled true
+        flavorDimensions "versionCode"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+    aaptOptions {
+        //不允许压缩png图片
+        cruncherEnabled = false
+    }
+    signingConfigs {
+        debug {
+             storeFile file(properties.getProperty("SIGNING_CONFINGS_DEBUG_STORE_FILE"))
+            storePassword properties.getProperty("SIGNING_CONFINGS_DEBUG_STORE_PASSWORD")
+            keyAlias properties.getProperty("SIGNING_CONFINGS_DEBUG_KEY_ALIAS")
+            keyPassword properties.getProperty("SIGNING_CONFINGS_DEBUG_KEY_PASSWORD")
+        }
+        release {
+            storeFile file(properties.getProperty("SIGNING_CONFINGS_REALEASE_STORE_FILE"))
+            storePassword properties.getProperty("SIGNING_CONFINGS_REALEASE_STORE_PASSWORD")
+            keyAlias properties.getProperty("SIGNING_CONFINGS_REALEASE_KEY_ALIAS")
+            keyPassword properties.getProperty("SIGNING_CONFINGS_REALEASE_KEY_PASSWORD")
+        }
+    }
+
+    productFlavors {
+        huawei {
+            resValue "string", "img_app_name", "碳控因子"
+            manifestPlaceholders = [TD_CHANNEL_ID_VALUE: "huawei"]
+        }
+
+        xiaomi {
+            resValue("string", "img_app_name", "碳控因子")
+            manifestPlaceholders = [TD_CHANNEL_ID_VALUE: "xiaomi"]
+        }
+
+        qh360 {
+            resValue("string", "img_app_name", "碳控因子")
+            manifestPlaceholders = [TD_CHANNEL_ID_VALUE: "qh360"]
+        }
+
+        baidu {
+            resValue("string", "img_app_name", "碳控因子")
+            manifestPlaceholders = [TD_CHANNEL_ID_VALUE: "baidu"]
+        }
+
+        yingyongbao {
+            resValue("string", "img_app_name", "碳控因子")
+            manifestPlaceholders = [TD_CHANNEL_ID_VALUE: "yingyongbao"]
+        }
+
+        official {
+            resValue("string", "img_app_name", "碳控因子")
+            manifestPlaceholders = [TD_CHANNEL_ID_VALUE: "official"]
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        /* // 多个变体自定义输出配置 android studio 3.0以下的配置变体方式
+        applicationVariants.all { variant ->
+            variant.outputs.each { output ->
+                def outputFile = output.outputFile
+                def fileName
+                if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                    if (variant.buildType.name == "debug") {
+                        fileName = "ccf_V${defaultConfig.versionName}_${generateTime()}_debug.apk"
+                    } else if (variant.buildType.name == "release") {
+                        fileName = "ccf_V${defaultConfig.versionName}_${variant.productFlavors[0].name}_${generateTime()}_release.apk"
+                    }
+                    def file = new File(fileName)
+                    output.outputFile = file
+                  output.outputFile = new File(outputFile.parent, fileName)
+                }
+            }
+        }*/
+
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                if(variant.buildType.name=="debug"){
+                    outputFileName = "ccf_V${defaultConfig.versionName}_${generateTime()}_debug.apk"
+                }else if(variant.buildType.name=="release"){
+                    outputFileName = "ccf_V${defaultConfig.versionName}_${generateTime()}_release.apk"
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            url "https://jitpack.io"
+        }
+        maven {
+            url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+static def generateTime() {
+    return new Date().format("yyyy-MM-dd-hh-mm", TimeZone.getDefault())
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile 'com.flyco.dialog:FlycoDialog_Lib:1.2.6@aar'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'in.srain.cube:ultra-ptr:1.0.11'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okio:okio:1.6.0'
+    compile 'com.alibaba:fastjson:1.2.37'
+    compile 'com.orhanobut:logger:1.15'
+    compile 'cc.cloudist.acplibrary:library:1.2.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.hotchemi:permissionsdispatcher:2.2.0'
+    provided 'com.github.hotchemi:permissionsdispatcher-processor:2.2.0'
+    compile files('libs/TalkingData_Analytics_Android_SDK_V2.2.37.jar')
+    compile 'cn.finalteam:okhttpfinal:2.0.7'
+    compile 'com.shizhefei:ViewPagerIndicator:1.1.6'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.github.yuzhiqiang1993:zxing:2.0.0'
+    compile files('libs/lite-orm-1.7.0.jar')
+    compile 'com.facebook.fresco:fresco:0.8.1'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'liji.library.dev:citypickerview:2.0.1'
+    compile 'com.shizhefei:MVCHelper-Library:1.3.2'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.5'
+    compile 'com.github.huzhenjie:ImageSelector:1.0.3'
+    compile 'com.android.support:multidex:1.0.1'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    compile 'com.bm.photoview:library:1.4.1'
+    compile 'com.wx.wheelview:wheelview:1.3.3'
+    compile 'com.android.support:cardview-v7:26.1.0'
+}

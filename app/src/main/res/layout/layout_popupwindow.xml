@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="32dp"
+    android:layout_marginRight="32dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_white_33000000">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:background="@color/color_white_faf9f9">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/text_colorPrimaryDark_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@null"
+                android:text="取消" />
+
+            <TextView
+                style="@style/text_0e1214_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="选择地区" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                style="@style/text_colorPrimaryDark_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@null"
+                android:text="确定" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white_faf9f9"
+            android:orientation="horizontal">
+
+            <com.wx.wheelview.widget.WheelView
+                android:id="@+id/wv_province"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.wx.wheelview.widget.WheelView
+                android:id="@+id/wv_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.wx.wheelview.widget.WheelView
+                android:id="@+id/wv_districts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

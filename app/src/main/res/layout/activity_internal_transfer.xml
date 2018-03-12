@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/icon_background"
+    tools:context="cn.cnlinfo.ccf.activity.InternalTransferActivity">
+    <include layout="@layout/item_title_no_right"/>
+    <include layout="@layout/item_image"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="17dp"
+        android:paddingLeft="38dp"
+        android:paddingRight="48dp"
+        android:paddingTop="17dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册积分:  " />
+
+            <TextView
+                android:id="@+id/tv_register_integral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消费积分:  "
+                />
+            <TextView
+                android:id="@+id/tv_consume_integral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="碳控积分:  " />
+
+            <TextView
+                android:id="@+id/tv_cycle_integral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="碳控因子:  "
+                />
+            <TextView
+                android:id="@+id/tv_ccf_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="产品积分:  "
+                />
+            <TextView
+                android:id="@+id/tv_product_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="9dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_0e1214_15"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height"
+                android:layout_weight="1"
+                android:text="互转类型" />
+
+
+            <Spinner
+                android:id="@+id/sp_transfer_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="9dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_0e1214_15"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height"
+                android:layout_weight="1"
+                android:text="互转数量" />
+
+            <cn.cnlinfo.ccf.view.CleanEditText
+                android:id="@+id/et_transfer_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_style"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:maxLength="11"
+                android:textColor="@drawable/selector_edit_text_color"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="9dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_0e1214_15"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height"
+                android:layout_weight="1"
+                android:text="安全密码" />
+
+            <cn.cnlinfo.ccf.view.CleanEditText
+                android:id="@+id/et_safe_pass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_style"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:inputType="textPassword"
+                android:digits="@string/input_impose_num_lower_case"
+                android:maxLines="1"
+                android:maxLength="11"
+                android:textColor="@drawable/selector_edit_text_color"
+                />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="69dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            style="@style/text_0e1214_15"
+            android:background="@drawable/selector_button_bg"
+            android:layout_marginTop="18dp"
+            android:text="确认"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
